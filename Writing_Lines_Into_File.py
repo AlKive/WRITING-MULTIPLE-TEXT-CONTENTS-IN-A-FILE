@@ -1,9 +1,6 @@
 # BABIERA,ALEXA | CMPE-103-MODULE-2-FILE-HANDLING-IN PYTHON | PROGRAMMING EXERCISE 2
 # A method in python to write multiple line of text contents into a text file
 
-
-
-
 #import necessary modules
 from pyfiglet import figlet_format
 import pygame
