@@ -12,11 +12,16 @@ def _yes_or_no():
  #WHILE user's decision is not blank,proceed
  while len(enter_again) != 0 or len(enter_again)!= 1 :
           #IF user's decision == YES
+          if enter_again.upper() == "YES":
              #CREATEE/OPEN the file
-             #GET user's input
-             #APPEND the input into the file
-             #CONTINUE asking to add more lines
-             
+             with open("mylife.txt","w") as user_line_file:
+                #GET user's input
+                user_input = input("Type in a phrase or sentence: ")
+                #APPEND the input into the file
+                user_line_file.write(str(user_input + "\n"))
+                #CONTINUE asking to add more lines
+                _yes_or_no() 
+  
           #ELIF user's decision == NO   
               #EXIT()
               
