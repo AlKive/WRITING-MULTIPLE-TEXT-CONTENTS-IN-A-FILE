@@ -23,7 +23,10 @@ def _yes_or_no():
                 _yes_or_no() 
   
           #ELIF user's decision == NO   
+          elif enter_again.upper() == "NO" :
               #EXIT()
+              print ("The program has ended~")
+              exit()
               
           #ELIF user's decision is not a YES or NO    
               #KEEP PROMPTING the user until they enter correctly
