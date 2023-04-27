@@ -29,7 +29,10 @@ def _yes_or_no():
               exit()
               
           #ELIF user's decision is not a YES or NO    
+          elif enter_again.lower() == "y" or enter_again.lower() == "n":
               #KEEP PROMPTING the user until they enter correctly
+              print("Please enter only YES or NO")
+              _yes_or_no()
               
           #ELSE break    
 #START
