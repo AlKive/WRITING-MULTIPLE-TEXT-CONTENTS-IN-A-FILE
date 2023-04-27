@@ -1,39 +1,43 @@
- #BABIERA,ALEXA | CMPE-103-MODULE-2-FILE-HANDLING-IN PYTHON | PROGRAMMING EXERCISE 3
- #Write a method in python to write multiple line of text contents into a text file mylife.txt.
- 
- #BABIERA,ALEXA | CMPE-103-MODULE-2-FILE-HANDLING-IN PYTHON | PROGRAMMING EXERCISE 3
- #Write a method in python to write multiple line of text contents into a text file mylife.txt.
- 
+# BABIERA,ALEXA | CMPE-103-MODULE-2-FILE-HANDLING-IN PYTHON | PROGRAMMING EXERCISE 2
+# A method in python to write multiple line of text contents into a text file
 
-#CREATE a function
-def _yes_or_no():
- #GET user's decision to type a line
- enter_again = input("Do you want to add lines?  YES or NO? : ")
- #WHILE user's decision is not blank,proceed
- while len(enter_again) != 0 or len(enter_again)!= 1 :
-          #IF user's decision == YES
-          if enter_again.upper() == "YES":
-             #CREATEE/OPEN the file
-             with open("mylife.txt","w") as user_line_file:
-                #GET user's input
-                user_input = input("Type in a phrase or sentence: ")
-                #APPEND the input into the file
-                user_line_file.write(str(user_input + "\n"))
-                #CONTINUE asking to add more lines
-                _yes_or_no() 
-  
-          #ELIF user's decision == NO   
-          elif enter_again.upper() == "NO" :
-              #EXIT()
-              print ("The program has ended~")
-              exit()
-              
-          #ELIF user's decision is not a YES or NO    
-          elif enter_again.lower() == "y" or enter_again.lower() == "n":
-              #KEEP PROMPTING the user until they enter correctly
-              print("Please enter only YES or NO")
-              _yes_or_no()
-              
-          #ELSE break    
-#START
-#function()
+
+
+
+#import necessary modules
+from pyfiglet import figlet_format
+import pygame
+from termcolor import colored
+import pyfiglet
+from colorama import Back, Fore, Style, init
+import time
+
+# formatting the header
+art = figlet_format(" Writing Multipe Lines into a File", font='digital', width=250)
+c_art = colored(art, 'yellow')
+
+print(Fore.MAGENTA + "━༻❁༺━༻❁༺━༻❁༺━" * 7)
+for line in c_art.split("\n"):
+    print(line.center(80))
+print(Fore.MAGENTA + "━༻❁༺━༻❁༺━༻❁༺━" *7 )
+
+with open("mylife.txt", "w") as user_line:
+   while True:
+        enter_again = input(Fore.LIGHTCYAN_EX + "Do you want to add lines (YES or NO) ? : " + Fore.LIGHTYELLOW_EX)
+        user_line.write("Do you want to add lines (YES or NO) ? : " + str(enter_again) + "\n")
+
+        if enter_again.upper() == "YES": 
+            user_input = input(Fore.LIGHTGREEN_EX + "Type in a phrase or sentence: " + Fore.YELLOW)
+            user_line.write("Type in a phrase or sentence: " + str(user_input) + "\n")
+            continue
+
+        elif enter_again.upper() == "NO" :
+            print (Fore.RED + "The program has ended~")
+            exit()
+      
+        elif enter_again.lower() == "y" or enter_again.lower() == "n":
+            print(Fore.RED + "Please enter only YES or NO")
+               
+        else:
+            print(Fore.RED + "ERROR! Invalid input.") 
+            break

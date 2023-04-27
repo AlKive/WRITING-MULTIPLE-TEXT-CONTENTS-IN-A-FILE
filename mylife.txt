@@ -1,1 +1,6 @@
-ASDFGHJKL
+Do you want to add lines (YES or NO) ? : Y
+Do you want to add lines (YES or NO) ? : YES
+Type in a phrase or sentence: SDFGHJK
+Do you want to add lines (YES or NO) ? : YES
+Type in a phrase or sentence: SDFGHJK
+Do you want to add lines (YES or NO) ? : NO
